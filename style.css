@@ -1,0 +1,189 @@
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 1rem;
+}
+
+/* Section/Page Styling */
+.page {
+  display: none;
+}
+.page:not(.hidden) {
+  display: block;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+h1, h2 {
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+/* Event List */
+#eventList {
+  list-style: none;
+  padding: 0;
+}
+
+#eventList li {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: background 0.2s ease-in-out;
+}
+#eventList li:hover {
+  background-color: #e6f7ff;
+}
+
+/* Floating Action Button */
+.fab {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+.fab:hover {
+  background-color: #0056b3;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.modal-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+}
+.modal-content h2 {
+  margin-bottom: 1rem;
+}
+.modal-content label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+.modal-content input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.modal-content button {
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+
+/* Detail Page Buttons */
+#addSegmentBtn,
+#syncBtn,
+#backBtn {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+#addSegmentBtn {
+  background-color: #28a745;
+  color: white;
+}
+#syncBtn {
+  background-color: #17a2b8;
+  color: white;
+}
+#backBtn {
+  background-color: #6c757d;
+  color: white;
+}
+#addSegmentBtn:hover {
+  background-color: #218838;
+}
+#syncBtn:hover {
+  background-color: #138496;
+}
+#backBtn:hover {
+  background-color: #5a6268;
+}
+
+/* Segment Form */
+.segment {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.segment label {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+}
+.segment input,
+.segment textarea,
+.segment select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.segment textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* Time fields side-by-side */
+.time-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.time-row div {
+  flex: 1;
+}
+
+/* Utility */
+.hidden {
+  display: none !important;
+}
